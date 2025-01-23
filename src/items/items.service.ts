@@ -18,4 +18,10 @@ export class ItemsService {
     this.items.push(item);
     return item;
   }
+
+  update(id: string): Item {
+    const item = this.items.find((item) => item.id === id);
+    item.status = 'SOLD_OUT';
+    return item;
+  }
 }
